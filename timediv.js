@@ -113,8 +113,14 @@ const _daySplitter = (startTime, endTime, time) => {
   return startTime + skipDay
 }
 
-const _isTimeIncluded = (startTime, endTime, time) => endTime - startTime >= time
+/**
+ * Function to check whether given time comes btw start and end times
+ *
+ * @param {number} startTime
+ * @param {number} endTime
+ * @param {number} time
+ */
 
-timeDivider(1581145671000, 1582960071000)
+const _isTimeIncluded = (startTime, endTime, time) => endTime - startTime >= time
 
 module.exports = timeDivider
