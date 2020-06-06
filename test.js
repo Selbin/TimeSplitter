@@ -36,10 +36,16 @@ const result = [{
   daily: [],
   weekly: [{ start: 1581100200000, end: 1583000999999 }],
   monthly: []
+},
+{
+  daily: [],
+  weekly: [{ start: 1549564200000, end: 1551378599999 }],
+  monthly: []
 }]
 
-const startArr = [1591332304000, 1593578411000, 1592371368000, 1593494568000, 1591593768000, 1581145671000]
-const endArr = [1622868304000, 1596170586000, 1594963368000, 1600233768000, 1591766568000, 1582960071000]
+const startArr = [1591332304000, 1593578411000, 1592371368000, 1593494568000, 1591593768000, 1581145671000, 1549564200000]
+const endArr = [1622868304000, 1596170586000, 1594963368000, 1600233768000, 1591766568000, 1582960071000, 1551335399000]
 for (let i = 0; i < startArr.length; i++) {
   console.log(JSON.stringify(timeDivider(startArr[i], endArr[i])) === JSON.stringify(result[i]))
+  console.log(timeDivider(startArr[i], endArr[i]))
 }
