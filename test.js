@@ -1,4 +1,4 @@
-const timeDivider = require('./A.JS')
+const timeDivider = require('./timediv.js')
 
 // test cases
 // 5 jun 20 - 5 jun 21
@@ -31,10 +31,15 @@ const result = [{
   daily: [{ start: 1591554600000, end: 1591813799999 }],
   weekly: [],
   monthly: []
+},
+{
+  daily: [],
+  weekly: [{ start: 1581100200000, end: 1583000999999 }],
+  monthly: []
 }]
 
-const startArr = [1591332304000, 1593578411000, 1592371368000, 1593494568000, 1591593768000]
-const endArr = [1622868304000, 1596170586000, 1594963368000, 1600233768000, 1591766568000]
+const startArr = [1591332304000, 1593578411000, 1592371368000, 1593494568000, 1591593768000, 1581145671000]
+const endArr = [1622868304000, 1596170586000, 1594963368000, 1600233768000, 1591766568000, 1582960071000]
 for (let i = 0; i < startArr.length; i++) {
   console.log(JSON.stringify(timeDivider(startArr[i], endArr[i])) === JSON.stringify(result[i]))
 }
